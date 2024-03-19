@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googlepis.com/css2?family=poppins&display=swap");
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+.footer-area {
+    padding-top: 50px;
+    background-image: linear-gradient(106deg,rgb(22, 116, 204),rgb(255, 201, 49));
+    color: #fff;
+    position: relative;
+}
+
+.main {
+    width: 100%;
+    /* max-width: 1200px;  */
+    padding: 0 100px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.single-footer {
+    width: calc(100% / 3);
+    /* Adjust for smaller screens */
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.single-footer h4 {
+    text-transform: capitalize;
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.single-footer ul {
+    list-style: none;
+    margin-left: 90px;
+}
+
+.single-footer ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.single-footer ul li a {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.single-footer ul li a i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.single-footer:first-child {
+    width: 100%;
+    /* Full width for the first item on smaller screens */
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.copy {
+    background-image: linear-gradient(106deg,
+            rgb(22, 116, 204),
+            rgb(255, 201, 49));
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 20px 0;
+    /* Adjust padding for smaller screens */
+}
+
+.f {
+    font-size: 19px;
+}
+
+.f:hover {
+    color: orange;
+}
+
+a {
+    transition: 0.8s;
+    overflow: hidden;
+}
+
+.single-footer h4 {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.single-footer:hover h4 {
+    color: orange;
+    transform: translateY(-1px);
+}
+
+a:hover {
+    background-color: orange;
+}
+
+.ocean {
+    height: 70px;
+    width: 100%;
+    /* position: absolute; */
+    top: 50%;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.wave {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+    /* position: absolute; */
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+}
+
+.wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets */
+@media only screen and (max-width: 1024px) {
+    .main {
+        padding: 0 15px;
+    }
+
+    .single-footer {
+        width: calc(90%);
+        /* Two items per row on tablets */
+    }
+
+    .ocean {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+/* For phones and smaller tablets */
+@media only screen and (max-width: 768px) {
+    .main {
+        padding: 0 10px;
+        /* Adjust padding for smaller screens */
+    }
+
+    .single-footer {
+        width: 100%;
+        /* Single item per row on small devices */
+    }
+
+    .footer-area {
+        margin-top: 100px;
+        /* Adjust margin-top for smaller screens */
+    }
+
+    .ocean {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+/* Ensure the wave element stays at the bottom */
+@media screen and (max-height: 600px) {
+    .ocean {
+        position: fixed;
+        bottom: 0;
+    }
+}
