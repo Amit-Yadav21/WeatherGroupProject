@@ -3,105 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signUp.css">
     <title>Simple Signup Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        background-image: linear-gradient(
-          106deg,
-          rgb(22, 116, 204),
-          rgb(255, 201, 49)
-        );
-      }
-      .container {
-        width: 25%;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
-      .heading {
-        font-size: 2.3rem;
-      }
-
-      input {
-        width: 90%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-      #checkbox {
-        width: 20px;
-        height: 20px;
-        margin-left: 10px;
-      }
-
-      .terms {
-        display: flex;
-        margin-bottom: 20px;
-        align-items: center;
-        gap: 10px;
-      }
-      .button {
-        width: 100%;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .button:hover {
-        background-color: #0056b3;
-      }
-
-      .p {
-        margin-top: 20px;
-      }
-
-      .p a {
-        color: #007bff;
-        text-decoration: none;
-      }
-
-      .p a:hover {
-        text-decoration: underline;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="container">
-      <h1 className="heading">SIGN UP</h1>
-      <form>
-        <input type="text" placeholder="Enter your name" required />
-        <input type="email" placeholder="Enter your Email" required />
-        <input type="password" placeholder="Create Password" required />
-        <input type="password" placeholder="Confirm Password" required />
-        <div class="terms">
-          <input type="checkbox" id="checkbox" required />
-          <label for="terms">Please accept all terms and conditions</label>
-        </div>
-        <button class="button" type="submit" onclick="refreshPage()">
-          Sign Up
-        </button>
-      </form>
-      <p class="p">Already have an account? <a href="login.html">Log In</a></p>
-    </div>
-    <script>
-      function refreshPage() {
-        location.reload();
-      }
-    </script>
+    <nav>
+      <div class="logoSection">
+          <img src="./assets//sunrise.svg" alt class="logo">
+          <p><a href="index.html">AccuWeather</a></p>
+      </div>
+      <ul>
+          <li><a href="index.html" class="bgColor">Home</a></li>
+              </a></li>
+          <li><a href="login.html" class="bgColor">Login</a></li>
+          <li><img src="./assets/account-avatar-profile.svg" alt></li>
+      </ul>
+  </nav>
+  <div class="container">
+    <h1 className="heading">SIGN UP</h1>
+    <form>
+      <input type="text" placeholder="Enter your name" required />
+      <input type="email" placeholder="Enter your Email" required />
+      <input type="password" placeholder="Create Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <div class="terms">
+        <input type="checkbox" id="checkbox" required />
+        <label for="terms">Please accept all terms and conditions</label>
+      </div>
+      <button class="button" type="submit" onclick="refreshPage()">
+        Sign Up
+      </button>
+    </form>
+    <p class="p">Already have an account? <a href="login.html">Log In</a></p>
+  </div>
+  <script>
+    function refreshPage() {
+      location.reload();
+    }
+  </script>
   </body>
 </html>

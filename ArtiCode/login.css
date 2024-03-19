@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: linear-gradient(
+    106deg,
+    rgb(22, 116, 204),
+    rgb(255, 201, 49)
+  );
+}
+
+nav {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(./assets/BgImage.jpg);
+}
+
+.logo {
+  border-radius: 1rem;
+  height: 3rem;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.logoSection a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+.bgColor {
+  padding: 8px;
+  background-color: white;
+}
+
+nav ul li a {
+  word-wrap: break-word;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.container {
+  width: 25%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: auto;
+  margin-top: 80px;
+  position: relative;
+}
+
+.heading {
+  font-size: 2.3rem;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#checkbox {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.terms {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.p {
+  margin-top: 20px;
+}
+
+.p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.p a:hover {
+  text-decoration: underline;
+}

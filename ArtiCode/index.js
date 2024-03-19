@@ -1,12 +1,15 @@
-var preloader = document.querySelector('#loading');
-function myFunction() {
+document.addEventListener("DOMContentLoaded", function() {
+    // Show the preloader
+    const preloader = document.querySelector('.preloader');
+    preloader.innerHTML = '<div class="loader"></div>';
+
+    // Hide the preloader after 5 seconds and show the content
     setTimeout(function() {
-        preloader.style.opacity = '0';
-        setTimeout(function() {
-            preloader.style.display = 'none';
-        }, 100); // Adjust the delay as needed
-    }, 2000); // Adjust the delay as needed
-}
+        preloader.style.display = 'none';
+        document.querySelector('.content').style.display = 'block';
+    }, 5000); // Adjust duration in milliseconds (5 seconds)
+});
+
 
 // Search weather data hereb Dummy weather data
 var dummyWeatherData = [
