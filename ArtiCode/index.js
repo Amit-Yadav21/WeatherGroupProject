@@ -1,5 +1,5 @@
+// preloader js code here
 document.addEventListener("DOMContentLoaded", function () {
-    // Show the preloader
     const preloader = document.querySelector('.preloader');
     preloader.innerHTML = '<div class="loader"></div>';
 
@@ -11,24 +11,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Dummy data (replace this with your actual data)
+// Dummy data for searching 
 const dummyData = [
-    {
-        city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+    {city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
             { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
             { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
             { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
         ]
     },
-    {
-        city: "Patna", state: "Bihar", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
+    {city: "Patna", state: "Bihar", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
             { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
             { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
             { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
         ]
     },
-    {
-        city: "Shimla", state: "Himachal Pradesh", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
+    {city: "Shimla", state: "Himachal Pradesh", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
             { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
             { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
             { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
@@ -43,13 +40,6 @@ function search() {
       // If input is empty, do nothing
       return;
     }
-
-    // const searchResults = dummyData.filter(item => {
-    //     // Perform a simple search by checking if the search term is included in the data
-    //     return item.city.toLowerCase().includes(searchTerm) ||
-    //         item.state.toLowerCase().includes(searchTerm) ||
-    //         item.dayData.some(day => day.day.toLowerCase().includes(searchTerm));
-    // });
 
     const searchResults = dummyData.filter(item => {
         // Check if both city and state match exactly
