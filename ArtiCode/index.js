@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         preloader.style.display = 'none';
         document.querySelector('.content').style.display = 'block';
-    }, 1000); // Adjust duration in milliseconds (5 seconds)
+    }, 2000); // Adjust duration in milliseconds (5 seconds)
 });
 
 
