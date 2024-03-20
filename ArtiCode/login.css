@@ -66,9 +66,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: red;
+  background-color: black;
   color: white;
-  padding: 5px;
+  padding: 8px;
   border-radius: 10px;
 }
 
