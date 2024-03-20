@@ -76,7 +76,7 @@ function displayResults(results) {
               <p>${result.state}</p>
             </div>
           </div>
-          <div class="middileSection">
+          <div>
             <p>Temperature</p>
             <p>${result.temperature}</p>
           </div>
