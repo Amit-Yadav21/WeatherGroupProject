@@ -129,6 +129,10 @@ nav ul li img{
     width: 50%;
     line-height: 1.5;
 }
+.para p{
+    font-size: 20px;
+}
+
 .Search{
     margin-top: 16px;
 }

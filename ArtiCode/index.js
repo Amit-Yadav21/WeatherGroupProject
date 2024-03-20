@@ -7,60 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         preloader.style.display = 'none';
         document.querySelector('.content').style.display = 'block';
-    }, 5000); // Adjust duration in milliseconds (5 seconds)
+    }, 1000); // Adjust duration in milliseconds (5 seconds)
 });
 
-
-// Search weather data hereb Dummy weather data
-// var dummyWeatherData = [
-//     {
-//         name: "New York",
-//         country: "US",
-//         temperature: 20,
-//         description: "Cloudy",
-//         humidity: 70,
-//         windSpeed: 5
-//     },
-//     {
-//         name: "London",
-//         country: "UK",
-//         temperature: 15,
-//         description: "Rainy",
-//         humidity: 80,
-//         windSpeed: 10
-//     },
-//     {
-//         name: "Paris",
-//         country: "France",
-//         temperature: 18,
-//         description: "Partly cloudy",
-//         humidity: 65,
-//         windSpeed: 7
-//     }
-// ];
-
-// function searchWeather() {
-//     var location = document.getElementById("searchInput").value;
-
-//     // Search for the location in the dummy data
-//     var foundData = dummyWeatherData.find(data => data.name.toLowerCase() === location.toLowerCase());
-//     if (foundData) {
-//         displayWeather(foundData);
-//     } else {
-//         alert("Location not found in dummy data.");
-//     }
-// }
-
-// function displayWeather(data) {
-//     var weatherData = document.getElementById("weatherData");
-//     weatherData.innerHTML = `
-//         <h2>${data.name}, ${data.country}</h2>
-//         <p>Temperature: ${data.temperature}°C</p>
-//         <p>Description: ${data.description}</p>
-//         <p>Humidity: ${data.humidity}%</p>
-//         <p>Wind Speed: ${data.windSpeed} m/s</p>
-//     `;
-// }
 
 // Dummy data (replace this with your actual data)
 const dummyData = [
@@ -88,13 +37,25 @@ const dummyData = [
 ];
 
 function search() {
-    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    // const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    const searchTerm = document.getElementById('search-input').value.trim().toLowerCase();
+    if (searchTerm === "") {
+      // If input is empty, do nothing
+      return;
+    }
+
+    // const searchResults = dummyData.filter(item => {
+    //     // Perform a simple search by checking if the search term is included in the data
+    //     return item.city.toLowerCase().includes(searchTerm) ||
+    //         item.state.toLowerCase().includes(searchTerm) ||
+    //         item.dayData.some(day => day.day.toLowerCase().includes(searchTerm));
+    // });
+
     const searchResults = dummyData.filter(item => {
-        // Perform a simple search by checking if the search term is included in the data
-        return item.city.toLowerCase().includes(searchTerm) ||
-            item.state.toLowerCase().includes(searchTerm) ||
-            item.dayData.some(day => day.day.toLowerCase().includes(searchTerm));
-    });
+        // Check if both city and state match exactly
+        return item.city.toLowerCase() === searchTerm ||
+               item.state.toLowerCase() === searchTerm;
+      });
 
     // Display search results
     displayResults(searchResults);
