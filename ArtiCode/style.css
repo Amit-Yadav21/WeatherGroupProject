@@ -7,6 +7,7 @@
 @import url('https://fonts.googlepis.com/css2?family=poppins&display=swap');
 body {
     font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Preloader styling */
