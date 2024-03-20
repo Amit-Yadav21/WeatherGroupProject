@@ -16,7 +16,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url(./assets/BgImage.jpg);
+  background-image: url(../assets/BgImage.jpg);
 }
 
 .logo {
