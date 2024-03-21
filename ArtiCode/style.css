@@ -290,15 +290,17 @@ button:hover {
 
 .footer-social a {
     color: black;
-    border: 1px solid #fff;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    line-height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+}
+.footer-social .round{
+    border: 2px solid #fff;
+}
+.footer-social i{
+    font-size: 32px;
+    text-align: center;
 }
 .AboutSextion{
     display: flex;
