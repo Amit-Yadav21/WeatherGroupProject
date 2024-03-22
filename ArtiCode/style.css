@@ -289,14 +289,14 @@ button:hover {
 }
 
 .footer-social a {
-    color: black;
+    color: whitesmoke;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
 }
 .footer-social .round{
-    border: 2px solid #fff;
+    border: 3px solid black;
 }
 .footer-social i{
     font-size: 32px;
