@@ -221,6 +221,8 @@ nav ul li img {
 
 /* ================================== */
 /* About Oer Team style here */
+/* ................................   ABOUT SECTION STYLING BY KAREENA .......................................... */
+
 .about_main_box {
     background-image: url("https://t4.ftcdn.net/jpg/04/61/23/23/360_F_461232389_XCYvca9n9P437nm3FrCsEIapG4SrhufP.jpg");
     background-repeat: no-repeat;
@@ -232,14 +234,13 @@ nav ul li img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
+    background-color: #eff6ff;
+    border-radius: 2px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 .about__textArea {
     margin-bottom: 30px;
-
 }
 
 .about__mainHeading {
@@ -249,9 +250,9 @@ nav ul li img {
 }
 
 .about__mainPara {
-    font-size: 1.5rem;
+    font-size: 18px;
     line-height: 1.6;
-    color: #0e0d0d;
+    color: #555;
     text-align: center;
 }
 
@@ -259,7 +260,6 @@ nav ul li img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .about__imageBox {
@@ -267,7 +267,8 @@ nav ul li img {
     margin-bottom: 20px;
     text-align: center;
     padding: 20px;
-    background-color: #eff6ff;
+    background-color: #fff;
+    /* background-color: #eff6ff; */
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(110, 109, 109, 0.1);
     transition: transform 0.5 s ease-in-out;
@@ -288,69 +289,24 @@ nav ul li img {
 }
 
 .about__innerHead {
-    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .about__innerPara {
-    font-size: 1.3rem;
+    font-size: 16px;
     color: #334155;
 }
 
-/* ..............  Media Query ................. */
-
-@media only screen and (max-width: 600px) {
-
-    .about__container {
-        max-width: 80%;
+/* Media Queries  for about section*/
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+    .about__imageBox {
+        flex: 0 0 100%;
     }
+}
 
-    .about__textArea {
-        margin-bottom: 20px;
-    }
-
-    .about__mainHeading {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .about__mainPara {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #555;
-    }
-
-    .about__imageContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
+@media only screen and (min-width: 500px) and (max-width: 800px) {
     .about__imageBox {
         flex: 0 0 calc(50% - 20px);
-        margin-bottom: 20px;
-        text-align: center;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .about__imageBox img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-
-    .about__innerHead {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .about__innerPara {
-        font-size: 14px;
-        color: #777;
     }
 }
 
