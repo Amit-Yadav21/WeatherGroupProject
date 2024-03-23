@@ -11,9 +11,6 @@
         <script src="index.js" defer></script>
     </head>
     <body id="Home">
-        <!-- page loader -->
-        <div class="preloader"></div>
-
         <!-- navBar here -->
         <nav>
             <div class="logoSection">
@@ -26,22 +23,20 @@
                 <li><a href="#AboutPage" class="bgColor">About Project</a></li>
                 <li><a href="./LoginPage/login.html" class="bgColor">Login</a></li>
                 <li><a href="./SignUpPage/signUp.html" class="bgColor">SignUp</a></li>
-                <li><a href="#AboutOurTeam" class="profileBG"><img
-                            src="./assets/ProfileImage.png"
-                            alt></a></li>
+                <li><a href="#AboutOurTeam" class="profileBG"><img src="./assets/profileImage.png" alt></a></li>
             </ul>
         </nav>
 
         <!-- Home/Landing page here -->
         <div class="main">
             <div class="para">
-                <h2>Weather Forecast</h2>
+                <h1>Weather Forecast</h1>
                 <p>where every click brings you closer to meteorological
                     mastery! Get ready to embark on a journey through weather
                     wonders with our sleek interface. Instantly check current
                     conditions and dive into detailed forecasts for any location
                     worldwide</p>
-                    <!-- Search Part here -->
+                <!-- Search Part here -->
                 <div class="Search">
                     <input type="text" id="search-input"
                         placeholder="Search weather city and state both Ex: Bihar,Shimla"
@@ -52,7 +47,95 @@
             </div>
             <!-- Search data show here -->
             <div>
-                <div id="search-results"></div>
+                <div id="search-results">
+                    <div class="Getdatacards">
+                        <div class="SectionFiest">
+                            <div class="GetSearchData">
+                                <div class="middileSection">
+                                    <div>
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <div>
+                                        <p>Kangra</p>
+                                        <p>Himchal Pradesh</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Temperature</p>
+                                    <p>12°</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="middleFlex">
+                            <div class="GetSearchData">
+                                <div class="middileSection">
+                                    <div>
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <div>
+                                        <p>Sunrise</p>
+                                        <p id="sunrise-time">5:45 AM</p>
+                                    </div>
+                                </div>
+                                <div class="middileSection">
+                                    <div>
+                                        <i class="fa-solid fa-cloud-sun"></i>
+                                    </div>
+                                    <div>
+                                        <p>Sunset</p>
+                                        <p>5:50 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="GetSearchData">
+                                <div class="middileSection">
+                                    <div>
+                                        <i class="fa-solid fa-cloud-rain"></i>
+                                    </div>
+                                    <div>
+                                        <p>Humidity</p>
+                                        <p>70%</p>
+                                    </div>
+                                </div>
+                                <div class="middileSection">
+                                    <div>
+                                        <i class="fa-solid fa-wind"></i>
+                                    </div>
+                                    <div>
+                                        <p>Windspeed</p>
+                                        <p>8km/h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="DayDummyData">
+                            <div class="Days">
+                                <p>Sat</p>
+                                <img
+                                    src="https://themesfamily.com/2024/mugni/assets/img/icon/1.png"
+                                    alt="sat-weather">
+                                <p>30°</p>
+                            </div>
+                            <div class="Days">
+                                <p>Sun</p>
+                                <img
+                                    src="https://themesfamily.com/2024/mugni/assets/img/icon/2.png"
+                                    alt="sat-weather">
+                                <p>30°</p>
+                            </div>
+                            <div class="Days">
+                                <p>Mon</p>
+                                <img
+                                    src="https://themesfamily.com/2024/mugni/assets/img/icon/3.png"
+                                    alt="sat-weather">
+                                <p>30°</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -73,7 +156,7 @@
                     </p>
 
                 </div>
-                
+
                 <!-- Our Team Cards -->
                 <div class="about__imageContainer">
                     <div class="about__imageBox">
@@ -158,7 +241,7 @@
         <footer class="footer-area" id="AboutPage">
             <div class="AboutSextion">
                 <div class="AboutSectionInformation">
-                    <h4>"About Our Project"</h4>
+                    <h1>"About Our Project"</h1>
                     <p>
                         WeatherForecast+ is a comprehensive weather
                         application designed to provide users with accurate
@@ -191,7 +274,9 @@
             </div>
             <!-- Copy write part here -->
             <div class="copy">
-                <p>&copy;2024 AccuWeather, This design is created by Alima Usmani, Amit Yadav, Arti Lahane, Jaya Srivastava, Kareena and Mehjbeen</p>
+                <p>&copy;2024 AccuWeather, This design is created by Alima
+                    Usmani, Amit Yadav, Arti Lahane, Jaya Srivastava, Kareena
+                    and Mehjbeen</p>
                 <p><i>Team Work</i></p>
             </div>
         </footer>

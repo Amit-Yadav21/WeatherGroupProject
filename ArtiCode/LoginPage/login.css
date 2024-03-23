@@ -5,8 +5,8 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   background-image: linear-gradient(106deg,
-      rgb(94, 166, 233),
-      rgb(236, 215, 154));
+  rgb(94, 166, 233),
+  rgb(236, 215, 154));
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url(../assets/BgImage.jpg);
+  background-image: url(../assets/BgImage.jpg)
 }
 
 .logo {
@@ -150,7 +150,6 @@ input {
   text-decoration: underline;
 }
 
-/*  ............................ Media Query  /........................... */
 
 @media (max-width: 768px) {
   .container {
