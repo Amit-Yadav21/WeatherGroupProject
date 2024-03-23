@@ -126,3 +126,81 @@ function displayResults(results) {
       resultsContainer.appendChild(resultElement);
   });
 }
+
+// -------------- JS FOR LOGIN PAGE ------------------------//
+// JavaScript for handling modal functionality
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("loginModal");
+  var loginButton = document.getElementById("loginButton");
+  var closeButtons = document.getElementsByClassName("close");
+
+  // Open login modal when clicking the login button
+  loginButton.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  // Close the modal when clicking on the close button or outside the modal
+  for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function () {
+      modal.style.display = "none";
+    };
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
+// -------------- JS FOR SIGNUP PAGE ------------------------//
+// JavaScript for handling modal functionality
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("signupModal");
+  var loginButton = document.getElementById("signupButton");
+  var closeButtons = document.getElementsByClassName("closeSignup");
+
+  // Open signup modal when clicking the signup button
+  loginButton.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  // Close the modal when clicking on the close button or outside the modal
+  for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function () {
+      modal.style.display = "none";
+    };
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+});
+
+
+// ..........................login/signup page
+const loginModal = document.getElementById('loginModal');
+const signupModal = document.getElementById('signupModal');
+function openLoginModal() {
+  signupModal.style.display = 'none';
+  loginModal.style.display = 'block';
+  document.body.style.overflowY = 'hidden'; // Hide vertical scrollbar
+}
+
+function closeLoginModal() {
+  loginModal.style.display = 'none';
+  document.body.style.overflowY = 'auto'; // Restore vertical scrollbar
+}
+
+function openSignupModal() {
+  loginModal.style.display = 'none';
+  signupModal.style.display = 'block';
+  document.body.style.overflowY = 'hidden'; // Hide vertical scrollbar
+}
+
+function closeSignupModal() {
+  signupModal.style.display = 'none';
+  document.body.style.overflowY = 'auto'; // Restore vertical scrollbar
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="indeex.js" defer></script>
+    </head>
+    <body>
+        <!-- ---------- NAVBAR ---------- -->
+        <nav class="navbar">
+            <div class="logo-Case">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZs7A4XJXT1ckQ5QaSTnXH2eugVg4rvxBCCacsVvqAXQ&s"
+                    alt
+                    srcset />
+                <h2>AccuWeather</h2>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">OUR TEAM</a></li>
+                <li><a href="#" id="loginButton">LOGIN</a></li>
+                <li><a href="#">SIGN UP</a></li>
+            </ul>
+        </nav>
+        <!-- ---------- NAVBAR  END---------- -->
+
+        <!-- LOGIN MODAL CODE START -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="container">
+                    <h1 class="heading">LOGIN</h1>
+                    <form class="formCase">
+                        <input
+                            class="input-box"
+                            type="email"
+                            placeholder="Enter your Email"
+                            required />
+                        <input
+                            class="input-box"
+                            type="password"
+                            placeholder="Enter your Password"
+                            required />
+                        <button class="button" type="submit">Login</button>
+                        <p class="p">
+                            Create an account? <a href="signUp.html">Sign Up</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- LOGIN MODAL CODE END -->
+    </body>
+</html>

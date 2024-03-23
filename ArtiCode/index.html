@@ -21,11 +21,60 @@
                 <li><a href="#Home" class="bgColor">Home</a></li>
                 <li><a href="#AboutOurTeam" class="bgColor">Our Team</a></li>
                 <li><a href="#AboutPage" class="bgColor">About Project</a></li>
-                <li><a href="./LoginPage/login.html" class="bgColor">Login</a></li>
-                <li><a href="./SignUpPage/signUp.html" class="bgColor">SignUp</a></li>
-                <li><a href="#AboutOurTeam" class="profileBG"><img src="./assets/profileImage.png" alt></a></li>
+                <!-- <li><a href="./LoginPage/login.html" class="bgColor">Login</a></li> -->
+                <li><a href="#" class="bgColor" id="loginButton">Login</a></li>
+                <!-- <li><a href="./SignUpPage/signUp.html" class="bgColor">SignUp</a></li> -->
+                <li><a href="#" class="bgColor"
+                        id="signupButton">Signup</a></li>
+                <li><a href="#AboutOurTeam" class="profileBG"><img
+                            src="./assets/profileImage.png" alt></a></li>
             </ul>
         </nav>
+
+        <!-- LOGIN MODAL CODE START -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+                <div class="container">
+                    <h1 class="heading">Login</h1>
+                    <form class="formCase">
+                        <input class="input-box" type="email"
+                            placeholder="Enter your Email" required />
+                        <input class="input-box" type="password"
+                            placeholder="Enter your Password" required />
+                        <button class="button" type="submit">Login</button>
+                        <p class="p">Don't have an account? <a
+                                href="#" onclick="openSignupModal()">Sign
+                                Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- LOGIN MODAL CODE END -->
+
+        <!-- signUp MODAL CODE START -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content modal-content-signup">
+                <span class="close closeSignup"
+                    onclick="closeSignupModal()">&times;</span>
+                <div class="container">
+                    <h1 class="heading">SignUp</h1>
+                    <form class="formCase">
+                        <input class="input-box" type="text"
+                            placeholder="Enter your Full Name" required />
+                        <input class="input-box" type="email"
+                            placeholder="Enter your Email" required />
+                        <input class="input-box" type="password"
+                            placeholder="Enter your Password" required />
+                        <button class="button" type="submit">SignUp</button>
+                        <p class="p">Already have an account? <a
+                                href="#"
+                                onclick="openLoginModal()">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- SIGNUP MODAL CODE END -->
 
         <!-- Home/Landing page here -->
         <div class="main">
