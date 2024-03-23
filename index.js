@@ -127,8 +127,7 @@ function displayResults(results) {
   });
 }
 
-// -------------- JS FOR LOGIN PAGE ------------------------//
-// JavaScript for handling modal functionality
+//............................................................. Login Model Js
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("loginModal");
   var loginButton = document.getElementById("loginButton");
@@ -153,8 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-// -------------- JS FOR SIGNUP PAGE ------------------------//
-// JavaScript for handling modal functionality
+// ........................................................... Signup Model Js
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("signupModal");
   var loginButton = document.getElementById("signupButton");
@@ -179,28 +177,23 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 
-
-// ..........................login/signup page
+// .......................... Move login to signup, sogimup to login page
 const loginModal = document.getElementById('loginModal');
 const signupModal = document.getElementById('signupModal');
 function openLoginModal() {
   signupModal.style.display = 'none';
   loginModal.style.display = 'block';
-  document.body.style.overflowY = 'hidden'; // Hide vertical scrollbar
 }
 
 function closeLoginModal() {
   loginModal.style.display = 'none';
-  document.body.style.overflowY = 'auto'; // Restore vertical scrollbar
 }
 
 function openSignupModal() {
   loginModal.style.display = 'none';
   signupModal.style.display = 'block';
-  document.body.style.overflowY = 'hidden'; // Hide vertical scrollbar
 }
 
 function closeSignupModal() {
   signupModal.style.display = 'none';
-  document.body.style.overflowY = 'auto'; // Restore vertical scrollbar
 }
