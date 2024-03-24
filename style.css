@@ -375,6 +375,9 @@ nav ul li img {
 }
 
 @media screen and (max-width: 425px){
+    .list-nav-bar a{
+        font-size: 1.5rem;
+    }
     .Search input {
         width: 100%;
         font-size: 1rem;
@@ -422,6 +425,9 @@ nav ul li img {
 @media screen and (max-width: 375px){
     .nav-bar{
         width: 100%;
+    }
+    .list-nav-bar a{
+        font-size: 1.5rem;
     }
     .Search input {
         width: 100%;
@@ -475,16 +481,8 @@ nav ul li img {
     .nav-bar {
         width: 94%;
     }
-    .list-nav-bar{
-        /* width: 50%; */
-        margin-right: 22px;
-        flex-wrap: wrap;
-        flex-direction: row;
-        height: 10rem;
-        width: auto;
-    }
     .list-nav-bar a{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .Search input {
         width: 100%;
