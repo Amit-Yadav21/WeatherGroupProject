@@ -12,22 +12,21 @@
         <script src="index.js" defer></script>
     </head>
     <body id="Home">
-        <!-- navBar here -->
-        <nav>
-            <div class="logoSection">
+        <nav class="nav-bar">
+            <div class="icon-nav">
                 <img src="./assets//sunrise.svg" alt class="logo">
-                <p>AccuWeather</p>
+                <span>AccuWeather</span>
             </div>
-            <ul>
-                <li><a href="#Home" class="bgColor">Home</a></li>
-                <li><a href="#AboutOurTeam" class="bgColor">Our Team</a></li>
-                <li><a href="#AboutPage" class="bgColor">About Project</a></li>
-                <li><a href="#" class="bgColor" id="loginButton">Login</a></li>
-                <li><a href="#" class="bgColor"
-                        id="signupButton">Signup</a></li>
-                <li><a href="#AboutOurTeam" class="profileBG"><img
-                            src="./assets/profileImage.png" alt></a></li>
+
+            <ul class="list-nav-bar active">
+                <li class="list-item"><a href="#Home">Home</a></li>
+                <li class="list-item"><a href="#AboutOurTeam">Our Team</a></li>
+                <li class="list-item"><a href="#AboutPage" class="bgColor">About Project</a></li>
+                <li class="list-item"><a href="#" class="bgColor" id="loginButton">Login</a></li>
+                <li class="list-item"><a href="#" class="bgColor" id="signupButton">Signup</a></li>
+                <li class="list-item"><a href="#AboutOurTeam" class="profileBG"><img src="./assets/profileImage.png" alt></a></li>
             </ul>
+            <div class="fas burger-menu" id="burger-menu">&#9776;</div>
         </nav>
 
         <!-- Login model page -->
@@ -82,7 +81,7 @@
                     wonders with our sleek interface. Instantly check current
                     conditions and dive into detailed forecasts for any location
                     worldwide</p>
-                <!-- Search Part here -->
+
                 <div class="Search">
                     <input type="text" id="search-input"
                         placeholder="Search weather city and state both Ex: Bihar,Shimla"
@@ -91,7 +90,6 @@
                 </div>
 
             </div>
-            <!-- Search data show here -->
             <div>
                 <div id="search-results">
                     <div class="Getdatacards">

@@ -1,3 +1,30 @@
+// hamburguer icon
+const hamburguer = document.getElementById("burger-menu");
+const navMenu = document.querySelector(".list-nav-bar");
+const navLinks = document.querySelectorAll(".list-item a");
+
+// Toggle the hamburger menu
+hamburguer.addEventListener("click", () => {
+    hamburguer.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Close the hamburger menu when a list item is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburguer.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+ // Ensure menu is hidden on page load
+ document.addEventListener("DOMContentLoaded", function() {
+  hamburguer.classList.remove('active');
+  navMenu.classList.remove('active');
+});
+
+// ..................hamburguer icon End Here
+
 // Dummy data for searching 
 const dummyData = [
   {city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
