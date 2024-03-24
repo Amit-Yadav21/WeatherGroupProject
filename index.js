@@ -82,7 +82,7 @@ if (results.length === 0) {
 
   // Create paragraph element with text
   const paragraph = document.createElement('p');
-  paragraph.textContent = 'No data found';
+  paragraph.textContent = 'No Data Found';
 
   // Append paragraph to card
   card.appendChild(paragraph);
