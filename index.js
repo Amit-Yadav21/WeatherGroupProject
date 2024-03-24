@@ -5,20 +5,20 @@ const navLinks = document.querySelectorAll(".list-item a");
 
 // Toggle the hamburger menu
 hamburguer.addEventListener("click", () => {
-    hamburguer.classList.toggle('active');
-    navMenu.classList.toggle('active');
+  hamburguer.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });
 
 // Close the hamburger menu when a list item is clicked
 navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        hamburguer.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
+  link.addEventListener("click", () => {
+    hamburguer.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
 });
 
- // Ensure menu is hidden on page load
- document.addEventListener("DOMContentLoaded", function() {
+// Ensure menu is hidden on page load
+document.addEventListener("DOMContentLoaded", function () {
   hamburguer.classList.remove('active');
   navMenu.classList.remove('active');
 });
@@ -27,23 +27,26 @@ navLinks.forEach(link => {
 
 // Dummy data for searching 
 const dummyData = [
-  {city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
-          { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
-          { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
-          { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
-      ]
+  {
+    city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
   },
-  {city: "Patna", state: "Bihar", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
-          { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
-          { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
-          { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
-      ]
+  {
+    city: "Patna", state: "Bihar", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
+      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
   },
-  {city: "Shimla", state: "Himachal Pradesh", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
-          { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
-          { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
-          { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
-      ]
+  {
+    city: "Shimla", state: "Himachal Pradesh", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
+      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
   }
 ];
 
@@ -56,10 +59,10 @@ function search() {
   }
 
   const searchResults = dummyData.filter(item => {
-      // Check if both city and state match exactly
-      return item.city.toLowerCase() === searchTerm ||
-             item.state.toLowerCase() === searchTerm;
-    });
+    // Check if both city and state match exactly
+    return item.city.toLowerCase() === searchTerm ||
+      item.state.toLowerCase() === searchTerm;
+  });
 
   // Display search results
   displayResults(searchResults);
@@ -67,18 +70,38 @@ function search() {
 
 function displayResults(results) {
   const resultsContainer = document.getElementById('search-results');
-  resultsContainer.innerHTML = ''; // Clear previous results
+resultsContainer.innerHTML = ''; // Clear previous results
 
-  if (results.length === 0) {
-      resultsContainer.innerHTML = '<p>No results found</p>';
-      return;
-  }
+if (results.length === 0) {
+  // Add class to body
+  document.body.classList.add('no-data-found');
+
+  // Create card container
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  // Create paragraph element with text
+  const paragraph = document.createElement('p');
+  paragraph.textContent = 'No data found';
+
+  // Append paragraph to card
+  card.appendChild(paragraph);
+
+  // Add emoji
+  const emoji = document.createElement('span');
+  emoji.textContent = '😞'; // Change this to any emoji you like
+  card.appendChild(emoji);
+
+  // Append card to results container
+  resultsContainer.appendChild(card);
+}
+
 
   // Create HTML for each result
   results.forEach(result => {
-      const resultElement = document.createElement('div');
-      resultElement.classList.add('Getdatacards');
-      resultElement.innerHTML = `
+    const resultElement = document.createElement('div');
+    resultElement.classList.add('Getdatacards');
+    resultElement.innerHTML = `
     <div class="SectionFiest">
       <div class="GetSearchData">
         <div class="middileSection">
@@ -150,7 +173,7 @@ function displayResults(results) {
       </div>
     </div>
   `;
-      resultsContainer.appendChild(resultElement);
+    resultsContainer.appendChild(resultElement);
   });
 }
 
