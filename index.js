@@ -28,26 +28,180 @@ document.addEventListener("DOMContentLoaded", function () {
 // Dummy data for searching 
 const dummyData = [
   {
-    city: "Jaunpur", state: "Uttar Pradesh", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+    location: "Agra", sunrise: "06:16am", sunset: "6:31pm", temperature: "12°C", humidity: "3%", windspeed: "5km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "15°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "3°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "10°" }
+    ]
+  },
+  {
+    location: "Ahmedabad", sunrise: "06:38am", sunset: "6:52pm", temperature: "22°C", humidity: "17%", windspeed: "11km/h", dayData: [
+      { day: "Wed", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "20°" },
+      { day: "Thu", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "16°" },
+      { day: "Fri", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "18°" }
+    ]
+  },
+  {
+    location: "Bengaluru", sunrise: "06:20am", sunset: "6:30pm", temperature: "28°C", humidity: "25%", windspeed: "29km/h", dayData: [
+      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "35°" },
+      { day: "Sum", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "40°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "29°" }
+    ]
+  },
+  {
+    location: "Bhopal", sunrise: "06:19am", sunset: "06:33pm", temperature: "33°C", humidity: "2%", windspeed: "50km/h", dayData: [
+      { day: "Tus", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "22°" },
+      { day: "Wed", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "16°" },
+      { day: "Thu", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "33°" }
+    ]
+  },
+  {
+    location: "Chennai", sunrise: "06:09am", sunset: "06:20pm", temperature: "38°C", humidity: "35%", windspeed: "33km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "11°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "19°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "22°" }
+    ]
+  },
+  {
+    location: "Delhi", sunrise: "6:19am", sunset: "06:35pm", temperature: "30°C", humidity: "5%", windspeed: "15km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Dharamshala", sunrise: "06:21am", sunset: "06:39pm", temperature: "25°C", humidity: "3%", windspeed: "4km/h", dayData: [
+      { day: "Wed", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "25°" },
+      { day: "Thu", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "28°" },
+      { day: "Fri", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "32°" }
+    ]
+  },
+  {
+    location: "Ghaziabad", sunrise: "06:18am", sunset: "06:34pm", temperature: "35°C", humidity: "7%", windspeed: "10km/h", dayData: [
+      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "33°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "29°" }
+    ]
+  },
+  {
+    location: "Gorakhpur", sunrise: "5:54am", sunset: "06:10pm", temperature: "40°C", humidity: "11%", windspeed: "15km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "38°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "40°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Hyderabad", sunrise: "06:16am", sunset: "06:28pm", temperature: "30°C", humidity: "15%", windspeed: "11km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Indore", sunrise: "06:25am", sunset: "06:39pm", temperature: "28°C", humidity: "12%", windspeed: "19km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Jaipur", sunrise: "06:09am", sunset: "06:23pm", temperature: "25°C", humidity: "35%", windspeed: "30km/h", dayData: [
+      { day: "Wed", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Thu", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Fri", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Kanpur", sunrise: "06:07am", sunset: "06:22pm", temperature: "10°C", humidity: "50%", windspeed: "30km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "15°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "19°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "25°" }
+    ]
+  },
+  {
+    location: "Kolkata", sunrise: "05:25am", sunset: "5:49pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Lucknow", sunrise: "06:04am", sunset: "06:20pm", temperature: "30°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "29°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "21°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "25°" }
+    ]
+  },
+  {
+    location: "Ludhiana", sunrise: "06:34am", sunset: "06:48pm", temperature: "45°C", humidity: "1%", windspeed: "20km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Jaunpur", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Patna", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
       { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
       { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
       { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
     ]
   },
   {
-    city: "Patna", state: "Bihar", sunrise: "5:40am", sunset: "6:40pm", temperature: "30°C", humidity: "50%", windspeed: "15km/h", dayData: [
+    location: "Shimla", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
       { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
       { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
       { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
     ]
   },
   {
-    city: "Shimla", state: "Himachal Pradesh", sunrise: "6:00am", sunset: "7:00pm", temperature: "20°C", humidity: "80%", windspeed: "5km/h", dayData: [
-      { day: "Sat", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
-      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
-      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    location: "Mumbai", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
     ]
-  }
+  },
+  {
+    location: "Nagpur", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Pune", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Surat", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Vadodara", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
+  {
+    location: "Varanasi", sunrise: "5:50am", sunset: "6:50pm", temperature: "28°C", humidity: "35%", windspeed: "10km/h", dayData: [
+      { day: "Sun", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/1.png", temperature: "30°" },
+      { day: "Mon", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/2.png", temperature: "30°" },
+      { day: "Tue", weatherIcon: "https://themesfamily.com/2024/mugni/assets/img/icon/3.png", temperature: "30°" }
+    ]
+  },
 ];
 
 function search() {
@@ -59,9 +213,8 @@ function search() {
   }
 
   const searchResults = dummyData.filter(item => {
-    // Check if both city and state match exactly
-    return item.city.toLowerCase() === searchTerm ||
-      item.state.toLowerCase() === searchTerm;
+    // Check if both location and state match exactly
+    return item.location.toLowerCase() === searchTerm
   });
 
   // Display search results
@@ -109,8 +262,7 @@ if (results.length === 0) {
             <i class="fa-solid fa-location-dot"></i>
           </div>
           <div>
-            <p>${result.city}</p>
-            <p>${result.state}</p>
+            <p>${result.location}</p>
           </div>
         </div>
         <div>
