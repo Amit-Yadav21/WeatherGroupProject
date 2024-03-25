@@ -75,7 +75,7 @@ input::placeholder {
 .button {
     border: none;
     border-radius: 10px;
-    background-color: #3b82f6;
+    background-color: #879ec2;
 }
 
 @media only screen and (max-width: 1024px){
